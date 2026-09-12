@@ -1,0 +1,1 @@
+public class App { public static void main(String[] a) throws Exception { com.sun.net.httpserver.HttpServer s=com.sun.net.httpserver.HttpServer.create(new java.net.InetSocketAddress(8080),0); s.createContext("/health",e->{byte[] b="{\"status\":\"ok\"}".getBytes();e.sendResponseHeaders(200,b.length);e.getResponseBody().write(b);e.close();}); s.start(); }}
